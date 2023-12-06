@@ -1,0 +1,353 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Slab:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+
+</head>
+
+<body>
+    <section class="header"
+        style="background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url(f7.jpeg);">
+        <nav>
+            <a href="index.php"><img src="f1.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="bookstore.html">FLATS</a></li>
+                    <li><a href="membership.html">MEMBERSHIP </a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <br>
+                    <?php
+                    if(isset($_SESSION['username'])){
+                    ?>
+                     <div>
+                        <a href="logout.php" class="hero-btn" style="border: 1px solid white;">LOGOUT</a>
+                    </div>
+                   
+                    <?php
+                    
+                }else{
+                    ?>
+                    <div>
+                        <a href="login.php" class="hero-btn" style="border: 1px solid white;">LOGIN</a>
+                        <a href="signin.php" class="hero-btn" style="border: 1px solid white;">REGISTER</a>
+                    </div>
+                    <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>GHAR HO TO APNA</h1>
+            <p>It is a home away from your home. <br> it's always a good idea to compare prices, 
+                <br>read reviews, and consider your specific requirements before making a decision on booking a flat.</p>
+            <a href="about.html" class="hero-btn">Know More</a>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section class="course">
+        <h1>WE OFFER</h1>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consectetur unde repellat, tempora esse
+            aspernatur ipsam totam ea, doloribus dolore assumenda quisquam! Aut porro officia laboriosam reiciendis
+            assumenda. Asperiores, illo?</p> -->
+        <div class="row">
+            <div class="course-col">
+                <h3>Research and Selection</h3>
+                <p>Online flat booking refers to the process of reserving or booking a flat or apartment through an online platform or website without physically visiting the property or interacting with a real estate agent in person. It involves using digital tools and services to browse available flats, view property details, check availability, and make a reservation or booking online.</p>
+            </div>
+            <div class="course-col">
+                <h3>Availability and Booking</h3>
+                <p>After making the booking, you may receive a confirmation email or notification with the details of your reservation. Some platforms may require additional verification steps, such as identity verification or providing relevant documents.</p>
+            </div>
+            <div class="course-col">
+                <h3>Check-in and Check-out</h3>
+                <p>On the scheduled date of your arrival, follow the instructions provided by the property owner or manager for check-in procedures. This may include meeting a representative, accessing a lockbox, or using a keyless entry system. Similarly, during check-out, follow the instructions for returning keys or any other requirements specified.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- featured books -->
+
+
+
+
+    <!-- feature books com -->
+
+    <div class="small-container">
+        <h2 class="title">
+            FEATURED FLATS
+
+        </h2>
+        <div class="row1">
+            <div class="col-4">
+                <img src="nov.jpg">
+                <h4>MODERN VALLEY</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <br>
+                <a href="book16.html" class="rent">RENT</a>
+
+            </div>
+            <div class="col-4">
+                <img src="nov2.jpeg">
+                <h4>DARPAN CITY</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <br>
+                <a href="book17.html" class="rent">RENT</a>
+
+            </div>
+            <div class="col-4">
+                <img src="nov3.jpeg">
+                <h4>NEW TOWN</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <br>
+                <a href="book18.html" class="rent">RENT</a>
+
+            </div>
+
+        </div>
+        <div class="categories">
+            <div class="small-container">
+                <h2 class="title">POPULAR FLATS</h2>
+                <div class="row1">
+                    <div class="col-3">
+                        <img src="novr.jpeg" style="cursor: pointer;">
+                    </div>
+                    <div class="col-3">
+                        <img src="nov66.jpeg" style="cursor: pointer;">
+                    </div>
+                    <div class="col-3">
+                        <img src="nov22.jpg" style="cursor: pointer;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- LATEST BOOKS -->
+
+
+        <h2 class="title">
+            LATEST FLATS
+
+        </h2>
+        <div class="row1">
+            <div class="col-4">
+                <img src="flat1.jpg">
+                <h4>GARDEN COLONY</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <br>
+                <a href="book4.html" class="rent">RENT</a>
+            </div>
+            <div class="col-4">
+                <img src="flat2.jpeg">
+                <h4>NEW TOWN</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <br>
+                <a href="book6.html" class="rent">RENT</a>
+            </div>
+            <div class="col-4">
+                <img src="flat3.jpeg">
+                <h4>PRIME CITY</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <br>
+                <a href="book19.html" class="rent">RENT</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- offers -->
+
+    <div class="offer">
+        <div class="small-container">
+            <div class="row1">
+                <div class="col-2">
+                    <img src="dddd.jpeg" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p style="color: black; text-decoration: underline;">EXCLUSIVE AVAILABLE</p>
+                    <h1>PRIME CITY</h1>
+                    <small style="color: black;">
+                        It's important to note that the specific steps and details may vary depending on the online platform or service you choose to book through. Always carefully read the terms and conditions, cancellation policies, and any other relevant information before finalizing your online flat booking.
+                    </small>
+                    <br>
+                    <br>
+                    <a href="offer.html" class="her-btn">Buy Now &#8594;</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- testinomial -->
+
+    <div class="testinomial">
+        <div class="small-container">
+            <h3 class="title">PEPOLE SAY ABOUT US</h3>
+            <div class="row1">
+
+                <div class="col-3">
+
+                    <i class="fa fa-quote-left"></i>
+
+                    <p style="color: black;">To get an accurate quote for booking a flat online, I recommend visiting real estate websites, rental platforms, or contacting property management companies in your desired location. These platforms can provide up-to-date information on available flats and their corresponding prices.
+                    </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="t1.jpg">
+                    <h3>Jack</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+
+                    <p style="color: black;">To get an accurate quote for booking a flat online, I recommend visiting real estate websites, rental platforms, or contacting property management companies in your desired location. These platforms can provide up-to-date information on available flats and their corresponding prices.
+                    </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="t2.jpg">
+                    <h3>Virat</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+
+                    <p style="color: black;">To get an accurate quote for booking a flat online, I recommend visiting real estate websites, rental platforms, or contacting property management companies in your desired location. These platforms can provide up-to-date information on available flats and their corresponding prices.
+                    </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="t3.jpg">
+                    <h3>Anubhav</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row1">
+                <div class="footer-col-1">
+                    <h5>DOWNLOAD OUR APP</h5>
+
+                    <div class="app-logo">
+                        <img src="playstore.png" style="cursor: pointer;">
+                        <img src="appstore.png" style="cursor: pointer;">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <a href="index.html"> <img src="logo.png" style="   width: 150px; margin-left: 10px;
+             border-radius: 55%;"></a>
+                    <p style=" cursor: pointer; " class="e">GHAR HO TO APNA</p>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>FOLLOW</h3>
+                    <ul>
+                        <a href="https://www.instagram.com/" style="text-decoration: none; color: black; ">
+                            <li style="cursor: pointer;" class="a">INSTAGRAM</li>
+                        </a>
+                        <a href="https://www.facebook.com/" style="text-decoration: none; color: black;">
+                            <li style="cursor: pointer;" class="a">FACEBOOK</li>
+                        </a>
+                        <a href="https://twitter.com/" style="text-decoration: none; color: black;">
+                            <li style="cursor: pointer;" class="a">TWITTER</li>
+                        </a>
+            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="copyright" style="cursor: pointer;"> Copyright
+                2022 - APNA GHAR
+            </p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
